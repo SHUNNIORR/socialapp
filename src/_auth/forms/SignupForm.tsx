@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -11,15 +10,13 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
-import React from "react";
 import { useForm } from "react-hook-form";
 import { SignupValidation } from "@/lib/validation";
 import { z } from "zod";
 import { Link, useNavigate } from "react-router-dom";
 
 import Loader from "@/components/shared/Loader";
-import { createUserAccount, signInAccount } from "@/lib/appwrite/api";
-import { toast, useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/components/ui/use-toast";
 import { useCreateUserAccount, useSignInAccount } from "@/lib/react-query/queriesAndMutations";
 import { useUserContext } from "@/context/AuthContext";
 
